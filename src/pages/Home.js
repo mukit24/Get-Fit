@@ -1,8 +1,15 @@
 import React from 'react'
+import Banner from '../components/Banner';
+import SearchExercises from '../components/SearchExercises';
+import Exercises from '../components/Exercises';
 
 const Home = () => {
     return (
-        <h2>ghdgsah</h2>
+        <>
+            <Banner />
+            <SearchExercises />
+            <Exercises />
+        </>
     )
 }
 

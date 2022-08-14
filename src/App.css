@@ -142,3 +142,9 @@ body {
     width: 280px;
   }
 }
+
+/* my styling */
+
+.navbar-brand {
+  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
