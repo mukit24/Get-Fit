@@ -145,17 +145,18 @@ body {
 
 /* my styling */
 
-.navbar-brand {
+.navbar-brand,
+.card-title {
   font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
 }
 
-.bg-search {
+.bg-light-grey {
   background-color: lightgray;
 }
 
-/* .search-exercise {
-  width: 75%;
-} */
+.bg-alice-blue {
+  background-color: aliceblue;
+}
 
 @media (min-width: 768px) {
   .search-exercise {

@@ -25,7 +25,7 @@ const SearchExercises = ({ setExercises }) => {
     }
 
     return (
-        <section className='bg-search text-dark p-5'>
+        <section className='bg-light-grey text-dark p-5'>
             <div className="container d-flex flex-column justify-content-center align-items-center">
                 <h3 className='pb-4'>
                     Awesome Exercises You Should Know
