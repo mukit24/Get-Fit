@@ -148,3 +148,17 @@ body {
 .navbar-brand {
   font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
 }
+
+.bg-search {
+  background-color: lightgray;
+}
+
+/* .search-exercise {
+  width: 75%;
+} */
+
+@media (min-width: 768px) {
+  .search-exercise {
+    width: 75%;
+  }
+}
