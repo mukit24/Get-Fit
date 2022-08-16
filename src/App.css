@@ -159,7 +159,13 @@ body {
 }
 
 @media (min-width: 768px) {
-  .search-exercise {
+
+  .search-exercise,
+  .select-category {
     width: 75%;
   }
+}
+
+.bodyPart-card {
+  width: 18rem;
 }

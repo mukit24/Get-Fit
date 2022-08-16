@@ -1,13 +1,12 @@
 import React from 'react'
 import { useState } from 'react'
 import { fetchData, exerciseOptions } from '../utils/fetchData'
-import CategoryScroller from './CategoryScroller'
+import CategorySelector from './CategorySelector'
 
 const SearchExercises = ({ setExercises }) => {
     const [search, setSearch] = useState('')
 
     const handleSearch = async () => {
-        // console.log('Clicked');
         if (search) {
             const exerciseData = await fetchData('https://exercisedb.p.rapidapi.com/exercises', exerciseOptions);
 
@@ -16,8 +15,6 @@ const SearchExercises = ({ setExercises }) => {
                 || exercise.target.toLowerCase().includes(search)
                 || exercise.equipment.toLowerCase().includes(search)
                 || exercise.bodyPart.toLowerCase().includes(search))
-
-            // console.log(searchedExercises);
 
             setSearch('');
             setExercises(searchedExercises);
@@ -35,7 +32,7 @@ const SearchExercises = ({ setExercises }) => {
                     <button className="btn btn-success" type="button" onClick={handleSearch}>Search</button>
                 </div>
             </div>
-            <CategoryScroller />
+            <CategorySelector />
         </section>
     )
 }
