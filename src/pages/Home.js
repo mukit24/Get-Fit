@@ -5,11 +5,12 @@ import Exercises from '../components/Exercises';
 import { useState } from 'react';
 const Home = () => {
     const [exercises, setExercises] = useState([])
+    const [bodyPart, setBodyPart] = useState('all')
     return (
         <>
             <Banner />
-            <SearchExercises setExercises={setExercises} />
-            <Exercises exercise_list={exercises} />
+            <SearchExercises setExercises={setExercises} bodyPart={bodyPart} setBodyPart={setBodyPart} />
+            <Exercises exercise_list={exercises} bodyPart={bodyPart} setExercises={setExercises} />
         </>
     )
 }

@@ -2,8 +2,9 @@ import React from 'react'
 import { useState } from 'react'
 import { fetchData, exerciseOptions } from '../utils/fetchData'
 import CategorySelector from './CategorySelector'
+import { scrollInto } from '../utils/scrollInto'
 
-const SearchExercises = ({ setExercises }) => {
+const SearchExercises = ({ setExercises, bodyPart, setBodyPart }) => {
     const [search, setSearch] = useState('')
 
     const handleSearch = async () => {
@@ -18,6 +19,7 @@ const SearchExercises = ({ setExercises }) => {
 
             setSearch('');
             setExercises(searchedExercises);
+            scrollInto('list_exercise');
         }
     }
 
@@ -32,7 +34,7 @@ const SearchExercises = ({ setExercises }) => {
                     <button className="btn btn-success" type="button" onClick={handleSearch}>Search</button>
                 </div>
             </div>
-            <CategorySelector />
+            <CategorySelector bodyPart={bodyPart} setBodyPart={setBodyPart} />
         </section>
     )
 }

@@ -1,10 +1,10 @@
-import React, { useState } from 'react'
-const CategorySelector = () => {
-    const [selectedPart, setSelectedPart] = useState('all')
+import React from 'react'
+const CategorySelector = ({ bodyPart, setBodyPart }) => {
+
     const bodyParts = ['all', 'back', 'cardio', 'chest', 'lower arms', 'lower legs', 'neck', 'shoulders', 'upper arms', 'upper legs', 'waist']
 
     const handleChange = (event) => {
-        setSelectedPart(event.target.value);
+        setBodyPart(event.target.value);
     }
 
     return (
@@ -13,7 +13,7 @@ const CategorySelector = () => {
                 Select Your Desired Exercise
             </h3>
             <div className="form-floating select-category">
-                <select className="form-select bg-light" id="floatingSelect" aria-label="Floating label select example" value={selectedPart} onChange={handleChange}>
+                <select className="form-select bg-light" id="floatingSelect" aria-label="Floating label select example" value={bodyPart} onChange={handleChange}>
                     {bodyParts.map((part) => (<option key={part} value={part}>{part.toUpperCase()}</option>))}
                 </select>
                 <label htmlFor="floatingSelect">Select Category</label>
