@@ -1,8 +1,17 @@
-import React from 'react'
+import Details from '../components/Details';
+import ExerciseVideos from '../components/ExerciseVideos';
+import SimilarExercises from '../components/SimilarExercises';
 
 const ExerciseDetail = () => {
   return (
-    <div>ExerciseDetail</div>
+    <section className="exercise-details">
+      <div className="container">
+        <Details />
+        <ExerciseVideos />
+        <SimilarExercises />
+      </div>
+    </section>
+
   )
 }
 

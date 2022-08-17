@@ -1,4 +1,5 @@
 import React from 'react'
+import { Link } from 'react-router-dom'
 
 const ExerciseCard = ({ exercise }) => {
     return (
@@ -9,7 +10,7 @@ const ExerciseCard = ({ exercise }) => {
                 <span class="badge bg-primary me-2">{exercise.bodyPart}</span>
                 <span class="badge bg-danger">{exercise.target}</span>
                 <p className="card-title my-2 ">{exercise.name}</p>
-
+                <Link to={`/exercise/${exercise.id}`}><button className='btn btn-sm btn-success '>Details</button></Link>
             </div>
         </div>
     )

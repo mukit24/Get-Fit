@@ -1,8 +1,7 @@
 import React from 'react'
 import ExerciseCard from './ExerciseCard'
 import { Pagination } from '@mui/material';
-import { useState, useEffect } from 'react';
-import { fetchData, exerciseOptions } from '../utils/fetchData';
+import { useState } from 'react';
 import { scrollInto } from '../utils/scrollInto';
 
 const Exercises = ({ exercise_list, bodyPart, setExercises }) => {
