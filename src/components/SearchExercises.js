@@ -6,6 +6,7 @@ import { scrollInto } from '../utils/scrollInto'
 
 const SearchExercises = ({ setExercises, bodyPart, setBodyPart }) => {
     const [search, setSearch] = useState('')
+    let isEmpty = false;
 
     const handleSearch = async () => {
         if (search) {
@@ -24,7 +25,7 @@ const SearchExercises = ({ setExercises, bodyPart, setBodyPart }) => {
     }
 
     return (
-        <section className='bg-light-grey text-dark p-5'>
+        <section className='bg-light-grey text-dark p-5 ' id='explore_exercise'>
             <div className="container d-flex flex-column justify-content-center align-items-center">
                 <h3 className='pb-4'>
                     Awesome Exercises You Should Know

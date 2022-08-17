@@ -1,8 +1,10 @@
 import React from 'react'
 import ExerciseCard from './ExerciseCard'
 import { Pagination } from '@mui/material';
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import { scrollInto } from '../utils/scrollInto';
+import { fetchData, exerciseOptions } from '../utils/fetchData';
+
 
 const Exercises = ({ exercise_list, bodyPart, setExercises }) => {
     const [currentPage, setCurrentPage] = useState(1);
@@ -11,21 +13,21 @@ const Exercises = ({ exercise_list, bodyPart, setExercises }) => {
     const indexOfFirstExercise = indexOfLastExercise - exercisesPerPage;
     const currentExercises = exercise_list.slice(indexOfFirstExercise, indexOfLastExercise);
 
-    // useEffect(() => {
-    //     const exerciseByCategory = async () => {
-    //         let exerciseData = []
-    //         if (bodyPart === 'all') {
-    //             exerciseData = await fetchData('https://exercisedb.p.rapidapi.com/exercises', exerciseOptions)
-    //         } else {
-    //             exerciseData = await fetchData(`https://exercisedb.p.rapidapi.com/exercises/bodyPart/${bodyPart}`, exerciseOptions);
-    //             scrollInto('list_exercise');
-    //         }
+    useEffect(() => {
+        const exerciseByCategory = async () => {
+            let exerciseData = []
+            if (bodyPart === 'all') {
+                exerciseData = await fetchData('https://exercisedb.p.rapidapi.com/exercises', exerciseOptions)
+            } else {
+                exerciseData = await fetchData(`https://exercisedb.p.rapidapi.com/exercises/bodyPart/${bodyPart}`, exerciseOptions);
+                scrollInto('list_exercise');
+            }
 
-    //         setExercises(exerciseData);
-    //     }
-    //     exerciseByCategory();
-    //     // eslint-disable-next-line react-hooks/exhaustive-deps
-    // }, [bodyPart])
+            setExercises(exerciseData);
+        }
+        exerciseByCategory();
+        // eslint-disable-next-line react-hooks/exhaustive-deps
+    }, [bodyPart])
 
     const paginate = (event, value) => {
         setCurrentPage(value);

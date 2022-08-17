@@ -9,10 +9,10 @@ const Banner = () => {
                         <h1 className='fw-bold'>Stay Fit <span className="text-success">Stay Heathy</span></h1>
 
                         <p className="lead my-4">
-                            We focus on Fitness.Check out the most effective exercises
+                            Physical fitness leads to better health and well-being, prevents various health problems and improves a better quality of life. Check out the most effective exercises
                         </p>
 
-                        <button className="btn btn-primary" >Explore Exercises</button>
+                        <a href="#explore_exercise"><button className="btn btn-primary" >Explore Exercises</button></a>
                     </div>
                     <img className="img-fluid" src={BannerPic} alt="banner" />
                 </div>

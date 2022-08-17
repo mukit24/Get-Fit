@@ -14,11 +14,11 @@ const Navbar = () => {
                 </button>
                 <div className="collapse navbar-collapse" id="navbarSupportedContent">
                     <ul className="navbar-nav m-auto mb-2 mb-lg-0">
-                        <li className="nav-item ">
-                            <Link to='/' className="nav-link active">Home</Link>
+                        <li className="nav-item">
+                            <Link to='/' className="nav-link">Home</Link>
                         </li>
                         <li className="nav-item">
-                            <a className="nav-link" href="#exercise">Exercise</a>
+                            <a className="nav-link" href="#list_exercise">Exercise</a>
                         </li>
                     </ul>
                 </div>

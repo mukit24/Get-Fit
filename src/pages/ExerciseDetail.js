@@ -10,15 +10,15 @@ const ExerciseDetail = () => {
   const [detailsData, setdetailsData] = useState({})
   const [exerciseVideo, setexerciseVideo] = useState([])
 
-  const name = 'push up'
+  const name = '3/4 sit up'
   useEffect(() => {
     const fetchDetailsData = async () => {
-      // const data = await fetchData(`https://exercisedb.p.rapidapi.com/exercises/exercise/${id}`, exerciseOptions);
-      // setdetailsData(data);
+      const data = await fetchData(`https://exercisedb.p.rapidapi.com/exercises/exercise/${id}`, exerciseOptions);
+      setdetailsData(data);
 
-      const videoData = await fetchData(`https://youtube-search-and-download.p.rapidapi.com/search?query=${name}`, videoOptions);
-      setexerciseVideo(videoData);
-      console.log(exerciseVideo);
+      const videoData = await fetchData(`https://youtube-search-and-download.p.rapidapi.com/search?query=${data.name}`, videoOptions);
+      setexerciseVideo(videoData.contents);
+      // console.log(exerciseVideo);
     }
     fetchDetailsData();
   }, [id])
@@ -27,8 +27,7 @@ const ExerciseDetail = () => {
     <section className="exercise-details bg-alice-blue">
       <div className="container">
         <Details detailsData={detailsData} />
-        <ExerciseVideos />
-        <SimilarExercises />
+        <ExerciseVideos exerciseVideo={exerciseVideo} name={detailsData.name} />
       </div>
     </section>
 
