@@ -1,3 +1,9 @@
-## Get Fit is a fitness application with tons of exrcise tutorial
-### It is built on ReactJS with the help of two APIs called ExerciseDB and Youtube Search & Download
-#### Live Demo: https://getfit24.netlify.app/
+## Get Fit Is A Fitness Application With Tons Of Exrcise Tutorial
+#### N.B: May Be Unable To Fetch Data If RapidAPI Free Monthly API Resquest Limit Is Exceeded 
+## Live Demo: https://getfit24.netlify.app/
+## Major Functionality
+* ### Various Exercise List (By Using ExerciseDB API)
+* ### Exercise Details
+* ### Advance Searching
+* ### Related Youtube Video List (By Using Youtube Search & Download API)
+### Language and Technologies: React, Bootstrap, Javascript, Rapid API
